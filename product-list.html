@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Product List | Sweet Paradise Bakery & Deli · Hamilton & Waterdown</title>
+<meta name="description" content="Browse the full Sweet Paradise product list. Breads, cakes, pastries, donuts, deli, prepared meals, sauces, grocery, and seasonal items. Hamilton and Waterdown.">
+<link rel="canonical" href="https://www.sweetparadise.ca/product-list">
+<meta property="og:title" content="Product List | Sweet Paradise Bakery & Deli">
+<meta property="og:description" content="The full Sweet Paradise catalogue. Searchable, filterable, with location availability.">
+<meta name="theme-color" content="#2A1A10">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,30..100;1,9..144,300..700,30..100&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+
+<style>
+  /* Product list specific styles */
+  .pl-search { display: flex; gap: var(--space-3); align-items: center; background: var(--color-flour); border: 1px solid rgba(42,26,16,0.12); border-radius: var(--radius-md); padding: var(--space-3) var(--space-4); box-shadow: var(--shadow-sm); }
+  .pl-search input { flex: 1; border: 0; background: transparent; font: inherit; font-family: var(--font-sans); font-size: 1rem; color: var(--color-charcoal); outline: none; padding: var(--space-2) 0; }
+  .pl-search input::placeholder { color: rgba(42,26,16,0.45); }
+  .pl-search__icon { font-family: var(--font-sans); font-size: 1.1rem; color: var(--color-espresso); opacity: 0.6; }
+  .pl-count { font-family: var(--font-sans); font-size: 0.9rem; color: rgba(42,26,16,0.6); margin-top: var(--space-4); }
+  .pl-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--space-5); margin-top: var(--space-6); }
+  .pl-item { background: var(--color-flour); border: 1px solid rgba(42,26,16,0.08); border-radius: var(--radius-md); padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-3); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+  .pl-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: rgba(42,26,16,0.18); }
+  .pl-item__cat { font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-tomato); font-weight: 600; }
+  .pl-item__name { font-family: var(--font-serif); font-size: 1.25rem; line-height: 1.2; color: var(--color-espresso); margin: 0; }
+  .pl-item__desc { font-size: 0.92rem; color: rgba(42,26,16,0.75); line-height: 1.55; margin: 0; }
+  .pl-item__foot { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: auto; padding-top: var(--space-3); border-top: 1px dashed rgba(42,26,16,0.15); }
+  .pl-tag { font-family: var(--font-sans); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 999px; font-weight: 500; }
+  .pl-tag--ham { background: rgba(179,58,42,0.1); color: var(--color-tomato); }
+  .pl-tag--wat { background: rgba(94,107,60,0.12); color: var(--color-olive); }
+  .pl-empty { text-align: center; padding: var(--space-10) var(--space-5); color: rgba(42,26,16,0.55); font-family: var(--font-serif); font-size: 1.3rem; font-style: italic; }
+</style>
+</head>
+<body class="has-mobile-bar">
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo" aria-label="Sweet Paradise home">
+      <span class="nav__logo-mark">Sweet Paradise</span>
+      <span class="nav__logo-sub">Bakery · Deli · Catering</span>
+    </a>
+    <nav class="nav__menu" aria-label="Primary">
+      <a href="cakes.html">Cakes</a>
+      <a href="bakery.html">Bakery</a>
+      <a href="deli.html">Deli</a>
+      <a href="prepared-meals.html">Prepared Meals</a>
+      <a href="catering.html">Catering</a>
+      <a href="product-list.html" class="is-active">Products</a>
+      <a href="our-story.html">Our Story</a>
+      <a href="locations.html">Locations</a>
+    </nav>
+    <a href="order.html" class="btn btn--tomato btn--sm nav__cta">Order / Inquire</a>
+    <button class="nav__toggle" data-drawer-open aria-label="Open menu">
+      <span>Menu</span>
+      <span class="nav__toggle-icon"><span></span><span></span></span>
+    </button>
+  </div>
+</header>
+
+<aside class="drawer" data-drawer aria-label="Mobile menu">
+  <div class="drawer__head">
+    <span class="nav__logo-mark">Sweet Paradise</span>
+    <button class="drawer__close" data-drawer-close aria-label="Close menu">✕</button>
+  </div>
+  <nav class="drawer__menu">
+    <a href="cakes.html">Cakes</a>
+    <a href="bakery.html">Bakery</a>
+    <a href="pastries.html">Pastries</a>
+    <a href="deli.html">Deli</a>
+    <a href="prepared-meals.html">Prepared Meals</a>
+    <a href="catering.html">Catering</a>
+    <a href="pasta-sauce.html">Pasta Sauce</a>
+    <a href="grocery.html">Grocery & Gift Baskets</a>
+    <a href="specials.html">Specials</a>
+    <a href="product-list.html">Product List</a>
+    <a href="our-story.html">Our Story</a>
+    <a href="locations.html">Locations</a>
+    <a href="contact.html">Contact</a>
+    <a href="order.html" class="btn btn--tomato" style="margin-top: var(--space-3);">Order / Inquire</a>
+  </nav>
+</aside>
+
+<section class="page-head paper-grain">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>/</span><span>Product List</span>
+    </nav>
+    <div class="eyebrow eyebrow--olive">The Full Catalogue</div>
+    <h1>Everything we make, bake, slice, and stock.</h1>
+    <p class="lede">Search by name, filter by category. Stock rotates, so call your location to confirm availability before you drive out.</p>
+  </div>
+</section>
+
+<!-- ===== SEARCH + FILTERS ===== -->
+<section class="section section--no-bottom">
+  <div class="container">
+    <div class="pl-search">
+      <span class="pl-search__icon">⌕</span>
+      <input type="search" id="pl-search-input" placeholder="Search products (cannoli, lasagna, sourdough...)" aria-label="Search products">
+    </div>
+
+    <div class="filter-chips" style="margin-top: var(--space-5);" data-filter-group="products">
+      <button class="chip is-active" data-filter="all">All</button>
+      <button class="chip" data-filter="bread">Bread</button>
+      <button class="chip" data-filter="cakes">Cakes</button>
+      <button class="chip" data-filter="pastries">Pastries</button>
+      <button class="chip" data-filter="donuts">Donuts</button>
+      <button class="chip" data-filter="cookies">Cookies</button>
+      <button class="chip" data-filter="pies">Pies & Tarts</button>
+      <button class="chip" data-filter="prepared">Prepared Meals</button>
+      <button class="chip" data-filter="deli">Deli</button>
+      <button class="chip" data-filter="grocery">Grocery</button>
+      <button class="chip" data-filter="sauces">Sauces</button>
+      <button class="chip" data-filter="catering">Catering</button>
+      <button class="chip" data-filter="seasonal">Seasonal</button>
+    </div>
+
+    <p class="pl-count" id="pl-count">Showing all products</p>
+    <p class="disclaimer" style="margin-top: var(--space-3);">Availability varies by location and day. Please call to confirm what is in the case before visiting. Hamilton: 905-389-3487. Waterdown: 905-689-8007.</p>
+  </div>
+</section>
+
+<!-- ===== PRODUCT GRID ===== -->
+<section class="section">
+  <div class="container">
+    <div class="pl-grid" id="pl-grid">
+
+      <!-- BREAD -->
+      <article class="pl-item" data-cat="bread" data-name="country sourdough loaf">
+        <span class="pl-item__cat">Bread</span>
+        <h3 class="pl-item__name">Country Sourdough</h3>
+        <p class="pl-item__desc">Long-fermented country loaf with a chewy crumb and crackling crust.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="bread" data-name="italian crusty bread vienna">
+        <span class="pl-item__cat">Bread</span>
+        <h3 class="pl-item__name">Italian Crusty Bread</h3>
+        <p class="pl-item__desc">Traditional Italian-style loaf, light interior, crackling crust. The everyday table bread.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="bread" data-name="ciabatta">
+        <span class="pl-item__cat">Bread</span>
+        <h3 class="pl-item__name">Ciabatta</h3>
+        <p class="pl-item__desc">Open-crumb Italian bread, perfect for sandwiches or dipping in oil.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="bread" data-name="focaccia">
+        <span class="pl-item__cat">Bread</span>
+        <h3 class="pl-item__name">Focaccia</h3>
+        <p class="pl-item__desc">Olive oil-rich, dimpled, finished with sea salt. Sold by the slab.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span></div>
+      </article>
+      <article class="pl-item" data-cat="bread" data-name="dinner rolls buns">
+        <span class="pl-item__cat">Bread</span>
+        <h3 class="pl-item__name">Dinner Rolls & Buns</h3>
+        <p class="pl-item__desc">Soft rolls, sandwich buns, kaisers. By the dozen.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="bread" data-name="rye bread">
+        <span class="pl-item__cat">Bread</span>
+        <h3 class="pl-item__name">Rye Bread</h3>
+        <p class="pl-item__desc">Dark rye, sliced or whole. Pairs with deli meats and sharp cheeses.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span></div>
+      </article>
+
+      <!-- CAKES -->
+      <article class="pl-item" data-cat="cakes" data-name="strawberry romanoff">
+        <span class="pl-item__cat">Cake</span>
+        <h3 class="pl-item__name">Strawberry Romanoff</h3>
+        <p class="pl-item__desc">Fresh strawberries, light cream, vanilla sponge. A house signature.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton (orders)</span><span class="pl-tag pl-tag--wat">Waterdown (cash & carry)</span></div>
+      </article>
+      <article class="pl-item" data-cat="cakes" data-name="tiramisu cake">
+        <span class="pl-item__cat">Cake</span>
+        <h3 class="pl-item__name">Tiramisu Cake</h3>
+        <p class="pl-item__desc">Espresso-soaked sponge, mascarpone cream, cocoa dust.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton (orders)</span></div>
+      </article>
+      <article class="pl-item" data-cat="cakes" data-name="strawberry chocolate mousse">
+        <span class="pl-item__cat">Cake</span>
+        <h3 class="pl-item__name">Strawberry Chocolate Mousse</h3>
+        <p class="pl-item__desc">Dark chocolate mousse with fresh strawberries.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton (orders)</span></div>
+      </article>
+      <article class="pl-item" data-cat="cakes" data-name="white strawberry chocolate mousse">
+        <span class="pl-item__cat">Cake</span>
+        <h3 class="pl-item__name">White Strawberry Chocolate Mousse</h3>
+        <p class="pl-item__desc">White chocolate mousse, fresh strawberries, vanilla sponge.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton (orders)</span></div>
+      </article>
+      <article class="pl-item" data-cat="cakes" data-name="nutella supreme">
+        <span class="pl-item__cat">Cake</span>
+        <h3 class="pl-item__name">Nutella Supreme</h3>
+        <p class="pl-item__desc">Hazelnut and chocolate cream, layered sponge.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton (orders)</span></div>
+      </article>
+      <article class="pl-item" data-cat="cakes" data-name="fruit flan">
+        <span class="pl-item__cat">Cake</span>
+        <h3 class="pl-item__name">Fruit Flan</h3>
+        <p class="pl-item__desc">Sponge base, pastry cream, glazed seasonal fruit.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton (orders)</span></div>
+      </article>
+      <article class="pl-item" data-cat="cakes" data-name="new york cheesecake">
+        <span class="pl-item__cat">Cake</span>
+        <h3 class="pl-item__name">New York Cheesecake</h3>
+        <p class="pl-item__desc">Dense, rich, classic New York style.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton (orders)</span></div>
+      </article>
+      <article class="pl-item" data-cat="cakes" data-name="sweet paradise cheesecake">
+        <span class="pl-item__cat">Cake</span>
+        <h3 class="pl-item__name">Sweet Paradise Cheesecake</h3>
+        <p class="pl-item__desc">The house cheesecake. Lighter, creamier, fruit-topped options.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton (orders)</span></div>
+      </article>
+      <article class="pl-item" data-cat="cakes" data-name="boston cream">
+        <span class="pl-item__cat">Cake</span>
+        <h3 class="pl-item__name">Boston Cream</h3>
+        <p class="pl-item__desc">Vanilla sponge, custard, chocolate top.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton (orders)</span></div>
+      </article>
+      <article class="pl-item" data-cat="cakes" data-name="strawberry boston cream">
+        <span class="pl-item__cat">Cake</span>
+        <h3 class="pl-item__name">Strawberry Boston Cream</h3>
+        <p class="pl-item__desc">Boston cream with a layer of fresh strawberries.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton (orders)</span></div>
+      </article>
+      <article class="pl-item" data-cat="cakes" data-name="orange cointreau">
+        <span class="pl-item__cat">Cake</span>
+        <h3 class="pl-item__name">Orange Cointreau</h3>
+        <p class="pl-item__desc">Cointreau-soaked sponge, orange cream, chocolate finish.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton (orders)</span></div>
+      </article>
+      <article class="pl-item" data-cat="cakes" data-name="italian rum">
+        <span class="pl-item__cat">Cake</span>
+        <h3 class="pl-item__name">Italian Rum</h3>
+        <p class="pl-item__desc">Classic rum-soaked sponge, layered creams.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton (orders)</span></div>
+      </article>
+      <article class="pl-item" data-cat="cakes" data-name="mocha butter cream">
+        <span class="pl-item__cat">Cake</span>
+        <h3 class="pl-item__name">Mocha Butter Cream</h3>
+        <p class="pl-item__desc">Espresso buttercream, chocolate sponge.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton (orders)</span></div>
+      </article>
+      <article class="pl-item" data-cat="cakes" data-name="raspberry swirl">
+        <span class="pl-item__cat">Cake</span>
+        <h3 class="pl-item__name">Raspberry Swirl</h3>
+        <p class="pl-item__desc">Light cream with raspberry coulis swirled through.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton (orders)</span></div>
+      </article>
+      <article class="pl-item" data-cat="cakes" data-name="carrot cake">
+        <span class="pl-item__cat">Cake</span>
+        <h3 class="pl-item__name">Carrot Cake</h3>
+        <p class="pl-item__desc">Spiced carrot, cream cheese frosting.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton (orders)</span></div>
+      </article>
+      <article class="pl-item" data-cat="cakes" data-name="raspberry chocolate truffle">
+        <span class="pl-item__cat">Cake</span>
+        <h3 class="pl-item__name">Raspberry Chocolate Truffle</h3>
+        <p class="pl-item__desc">Dense chocolate truffle, raspberry layers.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton (orders)</span></div>
+      </article>
+      <article class="pl-item" data-cat="cakes" data-name="vanilla bean cake">
+        <span class="pl-item__cat">Cake</span>
+        <h3 class="pl-item__name">Vanilla Bean</h3>
+        <p class="pl-item__desc">Pure vanilla bean sponge and cream. Classic.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton (orders)</span></div>
+      </article>
+      <article class="pl-item" data-cat="cakes" data-name="napoleon">
+        <span class="pl-item__cat">Cake</span>
+        <h3 class="pl-item__name">Napoleon</h3>
+        <p class="pl-item__desc">Layered puff pastry with pastry cream, fondant top.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton (orders)</span></div>
+      </article>
+
+      <!-- PASTRIES -->
+      <article class="pl-item" data-cat="pastries" data-name="cannoli">
+        <span class="pl-item__cat">Pastry</span>
+        <h3 class="pl-item__name">Cannoli</h3>
+        <p class="pl-item__desc">Filled to order with sweet ricotta cream, chocolate and pistachio.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="pastries" data-name="tiramisu">
+        <span class="pl-item__cat">Pastry</span>
+        <h3 class="pl-item__name">Tiramisu (Individual)</h3>
+        <p class="pl-item__desc">Single-serve tiramisu, mascarpone, espresso, cocoa.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="pastries" data-name="cream horns">
+        <span class="pl-item__cat">Pastry</span>
+        <h3 class="pl-item__name">Cream Horns</h3>
+        <p class="pl-item__desc">Flaky pastry horns filled with vanilla cream.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="pastries" data-name="cream puffs">
+        <span class="pl-item__cat">Pastry</span>
+        <h3 class="pl-item__name">Cream Puffs</h3>
+        <p class="pl-item__desc">Choux pastry filled with vanilla cream.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="pastries" data-name="eclairs">
+        <span class="pl-item__cat">Pastry</span>
+        <h3 class="pl-item__name">Éclairs</h3>
+        <p class="pl-item__desc">Long choux pastry, vanilla cream, chocolate top.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="pastries" data-name="portuguese custard tarts">
+        <span class="pl-item__cat">Pastry</span>
+        <h3 class="pl-item__name">Portuguese Custard Tarts</h3>
+        <p class="pl-item__desc">Flaky shells, set vanilla custard, caramelized tops.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="pastries" data-name="rum balls">
+        <span class="pl-item__cat">Pastry</span>
+        <h3 class="pl-item__name">Rum Balls</h3>
+        <p class="pl-item__desc">Cake, cocoa, rum, rolled in coconut or sprinkles.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="pastries" data-name="strawberry tarts">
+        <span class="pl-item__cat">Pastry</span>
+        <h3 class="pl-item__name">Strawberry Tarts</h3>
+        <p class="pl-item__desc">Pastry shell, custard, glazed fresh strawberries.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="pastries seasonal" data-name="vanilla slices">
+        <span class="pl-item__cat">Weekend Only</span>
+        <h3 class="pl-item__name">Vanilla Slices</h3>
+        <p class="pl-item__desc">Puff pastry, vanilla custard, dusted with sugar. Weekends only.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="pastries" data-name="brownies">
+        <span class="pl-item__cat">Pastry</span>
+        <h3 class="pl-item__name">Brownies</h3>
+        <p class="pl-item__desc">Fudgy, rich, classic chocolate brownies.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="pastries" data-name="cake pops">
+        <span class="pl-item__cat">Pastry</span>
+        <h3 class="pl-item__name">Cake Pops</h3>
+        <p class="pl-item__desc">Bite-size, dipped, decorated for the occasion.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="pastries" data-name="cheesecake bites">
+        <span class="pl-item__cat">Pastry</span>
+        <h3 class="pl-item__name">Cheesecake Bites</h3>
+        <p class="pl-item__desc">Mini cheesecakes, plated for entertaining.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="pastries" data-name="cupcakes">
+        <span class="pl-item__cat">Pastry</span>
+        <h3 class="pl-item__name">Cupcakes</h3>
+        <p class="pl-item__desc">Vanilla, chocolate, seasonal. Buttercream finished.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="pastries" data-name="nanaimo bars">
+        <span class="pl-item__cat">Pastry</span>
+        <h3 class="pl-item__name">Nanaimo Bars</h3>
+        <p class="pl-item__desc">Three layers, no-bake, Canadian classic.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="pastries" data-name="macaroons coconut">
+        <span class="pl-item__cat">Pastry</span>
+        <h3 class="pl-item__name">Coconut Macaroons</h3>
+        <p class="pl-item__desc">Toasted coconut, dipped in chocolate.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="pastries" data-name="macarons french">
+        <span class="pl-item__cat">Pastry</span>
+        <h3 class="pl-item__name">French Macarons</h3>
+        <p class="pl-item__desc">Almond meringue shells, ganache or buttercream filling.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="pastries" data-name="mousse bombs">
+        <span class="pl-item__cat">Pastry</span>
+        <h3 class="pl-item__name">Mousse Bombs</h3>
+        <p class="pl-item__desc">Individual mousse domes, glazed and decorated.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="pastries" data-name="cake slices">
+        <span class="pl-item__cat">Pastry</span>
+        <h3 class="pl-item__name">Cake Slices</h3>
+        <p class="pl-item__desc">Single slices from house cakes, rotating selection.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+
+      <!-- DONUTS -->
+      <article class="pl-item" data-cat="donuts" data-name="apple fritter">
+        <span class="pl-item__cat">Donut</span>
+        <h3 class="pl-item__name">Apple Fritter</h3>
+        <p class="pl-item__desc">Hand-cut, hand-glazed. The legend. Come early.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="donuts" data-name="boston cream donut">
+        <span class="pl-item__cat">Donut</span>
+        <h3 class="pl-item__name">Boston Cream Donut</h3>
+        <p class="pl-item__desc">Vanilla custard filled, chocolate glaze.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="donuts" data-name="jelly filled donut">
+        <span class="pl-item__cat">Donut</span>
+        <h3 class="pl-item__name">Jelly Filled</h3>
+        <p class="pl-item__desc">Raspberry or strawberry jam, dusted in sugar.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="donuts" data-name="glazed donut">
+        <span class="pl-item__cat">Donut</span>
+        <h3 class="pl-item__name">Glazed Donut</h3>
+        <p class="pl-item__desc">Classic ring donut, vanilla glaze.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+
+      <!-- COOKIES -->
+      <article class="pl-item" data-cat="cookies" data-name="biscotti">
+        <span class="pl-item__cat">Cookie</span>
+        <h3 class="pl-item__name">Italian Biscotti</h3>
+        <p class="pl-item__desc">Twice-baked, almond, anise, or chocolate-dipped.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="cookies" data-name="amaretti">
+        <span class="pl-item__cat">Cookie</span>
+        <h3 class="pl-item__name">Amaretti</h3>
+        <p class="pl-item__desc">Chewy almond cookies, classic Italian.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="cookies" data-name="italian wedding cookies">
+        <span class="pl-item__cat">Cookie</span>
+        <h3 class="pl-item__name">Italian Wedding Cookies</h3>
+        <p class="pl-item__desc">Buttery, nut-rolled, dusted in icing sugar.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="cookies" data-name="cookie tray">
+        <span class="pl-item__cat">Cookie</span>
+        <h3 class="pl-item__name">Mixed Cookie Tray</h3>
+        <p class="pl-item__desc">House mix of Italian and shortbread cookies. By the pound.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+
+      <!-- PIES & TARTS -->
+      <article class="pl-item" data-cat="pies" data-name="apple pie">
+        <span class="pl-item__cat">Pie</span>
+        <h3 class="pl-item__name">Apple Pie</h3>
+        <p class="pl-item__desc">Double-crust, fresh apples, traditional spice.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="pies" data-name="meat pies">
+        <span class="pl-item__cat">Savoury Pie</span>
+        <h3 class="pl-item__name">Meat Pies</h3>
+        <p class="pl-item__desc">Beef, chicken, and traditional fillings, ready to heat.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="pies" data-name="quiche">
+        <span class="pl-item__cat">Savoury Pie</span>
+        <h3 class="pl-item__name">Quiche</h3>
+        <p class="pl-item__desc">House quiche, Lorraine and seasonal varieties.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="pies" data-name="butter tarts">
+        <span class="pl-item__cat">Tart</span>
+        <h3 class="pl-item__name">Butter Tarts</h3>
+        <p class="pl-item__desc">Canadian classic, gooey filling, plain or with raisins.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+
+      <!-- PREPARED MEALS -->
+      <article class="pl-item" data-cat="prepared" data-name="lasagna">
+        <span class="pl-item__cat">Prepared Meal</span>
+        <h3 class="pl-item__name">Lasagna</h3>
+        <p class="pl-item__desc">Layered with house sauce, three cheeses, fresh pasta. Fresh or frozen.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="prepared" data-name="cabbage rolls">
+        <span class="pl-item__cat">Prepared Meal</span>
+        <h3 class="pl-item__name">Cabbage Rolls</h3>
+        <p class="pl-item__desc">Hand-rolled with beef and rice, in tomato sauce.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="prepared" data-name="chili">
+        <span class="pl-item__cat">Prepared Meal</span>
+        <h3 class="pl-item__name">House Chili</h3>
+        <p class="pl-item__desc">Hearty beef and bean chili, packed for the freezer or fridge.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="prepared" data-name="perogies">
+        <span class="pl-item__cat">Prepared Meal</span>
+        <h3 class="pl-item__name">Perogies</h3>
+        <p class="pl-item__desc">Potato and cheese, frozen by the dozen.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="prepared" data-name="prepared pasta penne">
+        <span class="pl-item__cat">Prepared Meal</span>
+        <h3 class="pl-item__name">Prepared Pasta</h3>
+        <p class="pl-item__desc">Penne, rigatoni, gnocchi in house sauce. Heat and serve.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="prepared" data-name="meatballs">
+        <span class="pl-item__cat">Prepared Meal</span>
+        <h3 class="pl-item__name">Meatballs in Sauce</h3>
+        <p class="pl-item__desc">House meatballs in our tomato sauce.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="prepared" data-name="cold salads pasta potato">
+        <span class="pl-item__cat">Prepared Meal</span>
+        <h3 class="pl-item__name">Cold Salads</h3>
+        <p class="pl-item__desc">Pasta salad, potato salad, coleslaw, marinated vegetables.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+
+      <!-- DELI -->
+      <article class="pl-item" data-cat="deli" data-name="prosciutto">
+        <span class="pl-item__cat">Deli Meat</span>
+        <h3 class="pl-item__name">Prosciutto</h3>
+        <p class="pl-item__desc">Italian dry-cured ham, sliced thin to order.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="deli" data-name="salami">
+        <span class="pl-item__cat">Deli Meat</span>
+        <h3 class="pl-item__name">Salami</h3>
+        <p class="pl-item__desc">Selection of Italian salami, sliced to order.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="deli" data-name="capicola">
+        <span class="pl-item__cat">Deli Meat</span>
+        <h3 class="pl-item__name">Capicola</h3>
+        <p class="pl-item__desc">Hot or sweet, sliced to order.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="deli" data-name="mortadella">
+        <span class="pl-item__cat">Deli Meat</span>
+        <h3 class="pl-item__name">Mortadella</h3>
+        <p class="pl-item__desc">Bologna-style Italian deli meat.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="deli" data-name="roast turkey">
+        <span class="pl-item__cat">Deli Meat</span>
+        <h3 class="pl-item__name">Oven-Roasted Turkey</h3>
+        <p class="pl-item__desc">House-roasted turkey breast, sliced fresh.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="deli" data-name="roast beef">
+        <span class="pl-item__cat">Deli Meat</span>
+        <h3 class="pl-item__name">Roast Beef</h3>
+        <p class="pl-item__desc">House-roasted beef, sliced to order.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="deli" data-name="ham black forest">
+        <span class="pl-item__cat">Deli Meat</span>
+        <h3 class="pl-item__name">Ham</h3>
+        <p class="pl-item__desc">Black forest, honey ham, and other varieties.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="deli" data-name="parmigiano reggiano">
+        <span class="pl-item__cat">Cheese</span>
+        <h3 class="pl-item__name">Parmigiano Reggiano</h3>
+        <p class="pl-item__desc">Imported, cut to the wedge.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="deli" data-name="grana padano">
+        <span class="pl-item__cat">Cheese</span>
+        <h3 class="pl-item__name">Grana Padano</h3>
+        <p class="pl-item__desc">Imported hard Italian cheese.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="deli" data-name="pecorino romano">
+        <span class="pl-item__cat">Cheese</span>
+        <h3 class="pl-item__name">Pecorino Romano</h3>
+        <p class="pl-item__desc">Sharp Italian sheep's milk cheese.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="deli" data-name="provolone">
+        <span class="pl-item__cat">Cheese</span>
+        <h3 class="pl-item__name">Provolone</h3>
+        <p class="pl-item__desc">Sliced for sandwiches or by the wedge.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="deli" data-name="bocconcini">
+        <span class="pl-item__cat">Cheese</span>
+        <h3 class="pl-item__name">Bocconcini & Mozzarella</h3>
+        <p class="pl-item__desc">Fresh, in water. Plus shredded mozzarella for the kitchen.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="deli" data-name="hot cold sandwiches">
+        <span class="pl-item__cat">Sandwich</span>
+        <h3 class="pl-item__name">Hot & Cold Sandwiches</h3>
+        <p class="pl-item__desc">Made to order on fresh bakery bread. Italian classics and house combinations.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+
+      <!-- SAUCES -->
+      <article class="pl-item" data-cat="sauces" data-name="classic tomato sauce">
+        <span class="pl-item__cat">Sauce</span>
+        <h3 class="pl-item__name">Classic Tomato Sauce</h3>
+        <p class="pl-item__desc">House recipe, plum tomatoes, slow-cooked.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="sauces" data-name="meat sauce bolognese">
+        <span class="pl-item__cat">Sauce</span>
+        <h3 class="pl-item__name">Meat Sauce</h3>
+        <p class="pl-item__desc">House tomato with seasoned ground beef.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="sauces" data-name="marinara">
+        <span class="pl-item__cat">Sauce</span>
+        <h3 class="pl-item__name">Marinara</h3>
+        <p class="pl-item__desc">Bright tomato, garlic, fresh herbs.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="sauces" data-name="arrabbiata">
+        <span class="pl-item__cat">Sauce</span>
+        <h3 class="pl-item__name">Arrabbiata</h3>
+        <p class="pl-item__desc">Spicy tomato with chili. For those who like heat.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="sauces" data-name="tomato basil">
+        <span class="pl-item__cat">Sauce</span>
+        <h3 class="pl-item__name">Tomato Basil</h3>
+        <p class="pl-item__desc">Classic tomato sauce with fresh basil.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="sauces" data-name="mushroom sauce">
+        <span class="pl-item__cat">Sauce</span>
+        <h3 class="pl-item__name">Mushroom Sauce</h3>
+        <p class="pl-item__desc">Tomato base with earthy mushrooms.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="sauces" data-name="vodka cream sauce">
+        <span class="pl-item__cat">Sauce</span>
+        <h3 class="pl-item__name">Vodka Cream</h3>
+        <p class="pl-item__desc">Tomato, cream, vodka. Restaurant classic.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+
+      <!-- GROCERY -->
+      <article class="pl-item" data-cat="grocery" data-name="olive oil extra virgin">
+        <span class="pl-item__cat">Grocery</span>
+        <h3 class="pl-item__name">Italian Extra Virgin Olive Oil</h3>
+        <p class="pl-item__desc">Imported, for finishing and cooking.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="grocery" data-name="balsamic vinegar">
+        <span class="pl-item__cat">Grocery</span>
+        <h3 class="pl-item__name">Balsamic Vinegar</h3>
+        <p class="pl-item__desc">Imported balsamic, several grades.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="grocery" data-name="imported pasta dry">
+        <span class="pl-item__cat">Grocery</span>
+        <h3 class="pl-item__name">Imported Dry Pasta</h3>
+        <p class="pl-item__desc">Bronze-die Italian pasta in classic shapes.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="grocery" data-name="san marzano tomatoes">
+        <span class="pl-item__cat">Grocery</span>
+        <h3 class="pl-item__name">San Marzano Tomatoes</h3>
+        <p class="pl-item__desc">Whole peeled, for sauce and slow-cooked dishes.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="grocery" data-name="italian biscotti shelf">
+        <span class="pl-item__cat">Grocery</span>
+        <h3 class="pl-item__name">Imported Cookies & Biscotti</h3>
+        <p class="pl-item__desc">Italian biscotti, amaretti, baci, and holiday boxes.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="grocery" data-name="imported chocolates">
+        <span class="pl-item__cat">Grocery</span>
+        <h3 class="pl-item__name">Imported Chocolates</h3>
+        <p class="pl-item__desc">Italian and European chocolates and confections.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+      <article class="pl-item" data-cat="grocery" data-name="gift baskets custom">
+        <span class="pl-item__cat">Grocery</span>
+        <h3 class="pl-item__name">Custom Gift Baskets</h3>
+        <p class="pl-item__desc">Built to your budget. Pastry, pantry, mixed gourmet.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Hamilton</span><span class="pl-tag pl-tag--wat">Waterdown</span></div>
+      </article>
+
+      <!-- CATERING -->
+      <article class="pl-item" data-cat="catering" data-name="catering pasta trays">
+        <span class="pl-item__cat">Catering</span>
+        <h3 class="pl-item__name">Pasta Trays</h3>
+        <p class="pl-item__desc">Penne, rigatoni, lasagna, and baked pastas in catering pans.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Pre-order · Both locations</span></div>
+      </article>
+      <article class="pl-item" data-cat="catering" data-name="antipasto platter">
+        <span class="pl-item__cat">Catering</span>
+        <h3 class="pl-item__name">Antipasto Platters</h3>
+        <p class="pl-item__desc">Cured meats, cheeses, marinated vegetables, olives.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Pre-order · Both locations</span></div>
+      </article>
+      <article class="pl-item" data-cat="catering" data-name="sandwich platters">
+        <span class="pl-item__cat">Catering</span>
+        <h3 class="pl-item__name">Sandwich Platters</h3>
+        <p class="pl-item__desc">Fresh bakery breads, deli meats, cheeses. Office and event ready.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Pre-order · Both locations</span></div>
+      </article>
+      <article class="pl-item" data-cat="catering" data-name="dessert trays bakery">
+        <span class="pl-item__cat">Catering</span>
+        <h3 class="pl-item__name">Dessert & Pastry Trays</h3>
+        <p class="pl-item__desc">Mixed Italian pastries, cookies, and bite-size desserts.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Pre-order · Both locations</span></div>
+      </article>
+      <article class="pl-item" data-cat="catering" data-name="full service catering">
+        <span class="pl-item__cat">Catering</span>
+        <h3 class="pl-item__name">Full-Service Catering</h3>
+        <p class="pl-item__desc">Weddings, corporate, parties. 20 to 500 guests. Quote on request.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Both locations</span></div>
+      </article>
+
+      <!-- SEASONAL -->
+      <article class="pl-item" data-cat="seasonal" data-name="panettone">
+        <span class="pl-item__cat">Seasonal</span>
+        <h3 class="pl-item__name">Panettone</h3>
+        <p class="pl-item__desc">Imported Italian holiday cake, boxed for gifting.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Holiday season</span></div>
+      </article>
+      <article class="pl-item" data-cat="seasonal" data-name="pandoro">
+        <span class="pl-item__cat">Seasonal</span>
+        <h3 class="pl-item__name">Pandoro</h3>
+        <p class="pl-item__desc">Star-shaped Italian holiday bread, dusted in icing sugar.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Holiday season</span></div>
+      </article>
+      <article class="pl-item" data-cat="seasonal" data-name="easter colomba">
+        <span class="pl-item__cat">Seasonal</span>
+        <h3 class="pl-item__name">Easter Colomba</h3>
+        <p class="pl-item__desc">Traditional Italian Easter dove cake. In season.</p>
+        <div class="pl-item__foot"><span class="pl-tag pl-tag--ham">Easter season</span></div>
+      </article>
+
+    </div>
+
+    <div class="pl-empty" id="pl-empty" hidden>No products match your search. Try a different word, or call us to ask.</div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section section--cream paper-grain">
+  <div class="container container--narrow" style="text-align: center;">
+    <div class="eyebrow eyebrow--tomato">Can't Find Something?</div>
+    <h2 style="margin-top: var(--space-3);">Call us. If we make it, we'll tell you when.</h2>
+    <p class="lede" style="margin-top: var(--space-4);">Stock changes weekly with what's fresh and in season. The fastest way to confirm what's in the case today is a quick phone call.</p>
+    <div class="cta-row cta-row--center" style="margin-top: var(--space-6);">
+      <a href="tel:9053893487" class="btn btn--primary">Hamilton · 905-389-3487</a>
+      <a href="tel:9056898007" class="btn btn--ghost">Waterdown · 905-689-8007</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <h3>Sweet Paradise</h3>
+        <p>A Hamilton Italian bakery, deli, and catering staple since 1986. Built by the Mancini family. Trusted by generations.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/sweetparadisebakery/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="https://www.facebook.com/sweetparadisebakerydeli/" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+        </div>
+      </div>
+      <div class="footer__col"><h5>Shop</h5><ul><li><a href="cakes.html">Cakes</a></li><li><a href="bakery.html">Bakery</a></li><li><a href="pastries.html">Pastries</a></li><li><a href="deli.html">Deli</a></li><li><a href="prepared-meals.html">Prepared Meals</a></li><li><a href="pasta-sauce.html">Pasta Sauce</a></li><li><a href="grocery.html">Grocery & Gifts</a></li></ul></div>
+      <div class="footer__col"><h5>Visit</h5><ul><li><a href="locations.html">Locations</a></li><li><a href="tel:9053893487">Hamilton · 905-389-3487</a></li><li><a href="tel:9056898007">Waterdown · 905-689-8007</a></li><li><a href="catering.html">Catering</a></li><li><a href="specials.html">Specials</a></li></ul></div>
+      <div class="footer__col"><h5>Family</h5><ul><li><a href="our-story.html">Our Story</a></li><li><a href="contact.html">Contact</a></li><li><a href="order.html">Order / Inquire</a></li><li><a href="product-list.html">Product List</a></li></ul></div>
+    </div>
+    <div class="footer__legal">
+      <span>&copy; 2026 Sweet Paradise Bakery & Deli. All rights reserved.</span>
+      <span class="italic script">Family-run since 1986</span>
+    </div>
+  </div>
+</footer>
+
+<nav class="mobile-bar" aria-label="Quick actions">
+  <a href="tel:9053893487"><span>Hamilton</span><span style="font-size: 0.55rem; opacity: 0.7;">Call</span></a>
+  <a href="tel:9056898007"><span>Waterdown</span><span style="font-size: 0.55rem; opacity: 0.7;">Call</span></a>
+  <a href="cakes.html"><span>Cake</span><span style="font-size: 0.55rem; opacity: 0.7;">Order</span></a>
+  <a href="catering.html" class="is-accent"><span>Catering</span><span style="font-size: 0.55rem; opacity: 0.85;">Inquire</span></a>
+</nav>
+
+<script src="js/main.js"></script>
+<script>
+  // Product list search + filter
+  (function() {
+    const input = document.getElementById('pl-search-input');
+    const grid = document.getElementById('pl-grid');
+    const count = document.getElementById('pl-count');
+    const empty = document.getElementById('pl-empty');
+    const chips = document.querySelectorAll('[data-filter-group="products"] .chip');
+    if (!input || !grid) return;
+    const items = Array.from(grid.querySelectorAll('.pl-item'));
+    let activeFilter = 'all';
+    let activeQuery = '';
+
+    function apply() {
+      let visible = 0;
+      items.forEach(item => {
+        const cat = (item.dataset.cat || '').toLowerCase();
+        const name = (item.dataset.name || '').toLowerCase();
+        const text = (item.textContent || '').toLowerCase();
+        const matchesFilter = activeFilter === 'all' || cat.split(' ').includes(activeFilter);
+        const matchesQuery = !activeQuery || name.includes(activeQuery) || text.includes(activeQuery);
+        const show = matchesFilter && matchesQuery;
+        item.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      if (count) {
+        if (activeQuery || activeFilter !== 'all') {
+          count.textContent = visible + ' product' + (visible === 1 ? '' : 's') + ' matching';
+        } else {
+          count.textContent = 'Showing all ' + items.length + ' products';
+        }
+      }
+      if (empty) empty.hidden = visible !== 0;
+    }
+
+    input.addEventListener('input', e => {
+      activeQuery = e.target.value.trim().toLowerCase();
+      apply();
+    });
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('is-active'));
+        chip.classList.add('is-active');
+        activeFilter = chip.dataset.filter;
+        apply();
+      });
+    });
+
+    // Pastries-style chips on other pages
+    document.querySelectorAll('[data-filter-group]:not([data-filter-group="products"])').forEach(group => {
+      const targetKey = group.dataset.filterGroup;
+      const targetEl = document.querySelector('[data-filter-target="' + targetKey + '"]');
+      if (!targetEl) return;
+      const targetItems = Array.from(targetEl.children);
+      group.querySelectorAll('.chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+          group.querySelectorAll('.chip').forEach(c => c.classList.remove('is-active'));
+          chip.classList.add('is-active');
+          const f = chip.dataset.filter;
+          targetItems.forEach(it => {
+            const tag = (it.dataset.tag || '').toLowerCase();
+            it.style.display = (f === 'all' || tag.split(' ').includes(f)) ? '' : 'none';
+          });
+        });
+      });
+    });
+
+    apply();
+  })();
+</script>
+</body>
+</html>
