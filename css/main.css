@@ -1487,8 +1487,8 @@ body { animation: sp-fade-in 0.7s ease both; }
 }
 
 /* ---- Brand logo image (cleaned wordmark) ---- */
-.nav__logo-img { height: 30px; width: auto; display: block; }
+.nav__logo-img { height: 22px; width: auto; display: block; }
 .nav__logo-sub { display: block; }
-.drawer__head .nav__logo-img { height: 26px; }
-.footer__logo-img { height: 48px; width: auto; display: block; margin-bottom: var(--space-3); }
-@media (max-width: 600px){ .nav__logo-img { height: 26px; } }
+.drawer__head .nav__logo-img { height: 20px; }
+.footer__logo-img { height: 34px; width: auto; display: block; margin-bottom: var(--space-3); }
+@media (max-width: 600px){ .nav__logo-img { height: 19px; } }
