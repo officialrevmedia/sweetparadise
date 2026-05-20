@@ -672,3 +672,19 @@ Modern evergreen browsers: Chrome, Edge, Firefox, Safari (last 2 versions). Inte
 **Contact:** info@revmedia.ca · 365-357-3006
 
 *Family-run since 1986.*
+
+---
+
+## 9. Revamp v3 — Real Photos, Online Ordering, Authentic Content
+
+This revision replaced the placeholder imagery and refined the site end to end.
+
+**Photography.** All 39 client photos were optimized (resized, compressed, progressive JPEG) into `assets/img/` with semantic filenames and mapped to context across every page. Every photo is used at least once. Each `<img>` retains a branded SVG `onerror` fallback so a missing file never renders as a broken icon.
+
+**Online ordering.** The order.online storefront (`https://order.online/business/SweetParadise-209088`) is wired into the primary nav button ("Order Online"), the homepage hero, a dedicated "Order online for pickup" banner on the home and order pages, the mobile sticky bar, and the footer. Cakes and catering continue to route to phone, as the business handles those by call.
+
+**Authentic content.** Copy was rewritten from the live sweetparadise.ca pages: the Castelli-region origin story, Carmen's Calabrese bread and beekeeping, Concentina's role, Dino's George Brown training and 50+ years decorating, the hearth-baked style with no preservatives, the 10+ yeast-raised donut flavours, the pasta sauce recipe established 1925 with 15 varieties, the 30-foot deli case, the 40-foot freezer, and the Hamilton Spectator Readers' Choice Award. Contact email `info@sweetparadise.ca` was added site-wide.
+
+**Design and motion.** An elegance layer was added to `main.css`: smooth page-load fade, refined scroll reveals with a soft blur lift and staggered timing, image hover-zoom inside framed media, animated nav and text-link underlines, calmer card lifts, and a heritage photo gallery on the Our Story page. All motion respects `prefers-reduced-motion`.
+
+**Assets note for deployment.** The `assets/` folder must be uploaded alongside the HTML, `css/`, and `js/` folders. To swap any photo later, drop a replacement with the same filename into `assets/img/`.

@@ -147,3 +147,10 @@ Once the GitHub Pages URL works, you can point the real domain at it.
 ---
 
 *Prepared by revmedia. Questions: info@revmedia.ca*
+
+
+## Important: Upload the assets folder
+
+This build now includes an `assets/img/` folder with the real photography. When uploading, make sure `assets/` is uploaded alongside `index.html`, `css/`, and `js/`. If photos do not appear on the live site, the `assets` folder did not upload. To replace a photo later, drop a new file with the same name into `assets/img/`.
+
+The **Order Online** buttons link to your order.online storefront and open in a new tab. They work immediately on the live site, no setup needed.
